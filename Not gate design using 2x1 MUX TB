@@ -1,0 +1,16 @@
+`timescale 1ns / 1ps
+
+
+module MUX_not_gate_TB(
+
+    );
+    reg A;
+    wire Y;
+    MUX_not_gate uut(A,Y);
+    initial begin
+    A = 0;
+    #20 A = 1;
+    #20 A = 0;
+    #20 $finish();
+    end
+endmodule
